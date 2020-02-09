@@ -2,22 +2,39 @@
 <html>
 
 <head>
+  <script src="https://cdn.jsdelivr.net/npm/p5@0.10.2/lib/p5.js"></script>
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      displayAlign: "left",
+      displayIndent: "1em"
+    });
+    </script>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/latest.js?config=TeX-AMS-MML_HTMLorMML'></script>
+  <link rel="stylesheet" type="text/css" href="../style.css">
   <meta charset="utf-8">
 </head>
 
 <body>
   <h2>Dreieck </h2>
-  <p>Umfang eines Dreiecks berechnen: \(U = a + b +c\)
-    <br> Fläche eines Dreiecks berechnen: \(A = {{Grundseite \cdot Höhe} \over 2}\)
+  <p>
+    Umfang eines Dreiecks berechnen:
+    \[\large U = a + b +c\]
+    <br> Flächeninhalt eines Dreiecks berechnen:
+    \[\large A = {{Grundseite \cdot Höhe} \over 2}\]
 
  </p>
  <h2>Kreis </h2>
- <p>Durchmesser eines Kreises berechnen: \(d = 2 \cdot r\)
-   <br> Umfang eines Kreises berechnen: \(U = \pi \cdot 2 \cdot r\)
-  <br>  Fläche eines Kreises berechnen: \( A_k = \pi \cdot r^2\) </p>
-
-
+ <p>Durchmesser eines Kreises berechnen:
+    \[\large d = 2 \cdot r\]
+   <br> Umfang eines Kreises berechnen:
+    \[\large U = \pi \cdot d\]
+  <br>  Flächeninhalt eines Kreises berechnen:
+   \[\large A_k = \pi \cdot r^2\] </p>
+   <figure>
+  <div id='p5Container'></div>
+  <figcaption>Den Flächeninhalt des Kreises über ein Dreieck annähern<figcaption></figcaption>
+</figure>
   
-</body>
+  <script src="circleArea.js"></script>
+ </body>
 </html>
