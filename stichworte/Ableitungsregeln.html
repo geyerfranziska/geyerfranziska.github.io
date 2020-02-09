@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script src='../p5.min.js'></script>
+ <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/latest.js?config=TeX-AMS-MML_HTMLorMML'></script>
+<!-- <script id="MathJax-script" async="" src="tex-mml-chtml.js"></script> -->
+<link rel="stylesheet" type="text/css" href="../style.css">
+<meta charset="utf-8">
+</head>
+
+<body>
+  <h2>Ableitungsregeln</h2>
+  <h3 id="Potenzregel">Potenzregel</h3>
+  <p>Für eine Potenzfunktion \(f(x) = x^n , n\in \mathbb R\), gilt:
+    \[f'(x) = n \cdot x ^ {n-1}\]
+    Beweis: für \(n \in \mathbb N:\)
+    \[f'(x) = \lim\limits_{h \to 0}
+    {{f(x+h) - f(x) } \over h}\]
+      \[f'(x) = \lim\limits_{h \to 0} {{{(x+h)}^n- x^n } \over h}\]
+      \[f'(x) = \lim\limits_{h \to 0}{{x^n+ n \cdot x ^{n-1} \cdot h + n \cdot x^{n-2} \cdot h^2 + \dots + n \cdot x \cdot h^{n-1}+ h^n (- x^n)} \over h}\]
+      \[f'(x) = \lim\limits_{h \to 0}{{ n \cdot x ^{n-1} \cdot h + n \cdot x^{n-2} \cdot h^2 + \dots + n \cdot x \cdot h^{n-1}+ h^n} \over h}\]
+      \[f'(x) = \lim\limits_{h \to 0} {h \cdot {( n \cdot x ^{n-1} + n \cdot x^{n-2} \cdot h + \dots + n \cdot h ^{n-2} + h^{n-1})} \over h}\]
+      \[f'(x) = \lim\limits_{h \to 0} { { n \cdot x ^{n-1} + n \cdot x^{n-2} \cdot h + \dots + n \cdot h ^{n-2} + h^{n-1}}}\]
+    \[f'(x) = n \cdot x ^ {n-1}\]
+
+    Beweis: für \(m \in \mathbb Z, n< 0\) \[x^m={1 \over x ^ {-m}}\] \[n=-m\] \[f(x)={1 \over x^n}\]
+      \[f'(x)=\lim\limits_{h \to 0} {{f(x+h) - f(x) } \over h}\]
+      \[f'(x) = \lim\limits_{h \to 0} {{(x + h)^{-n}-x^{-n}} \over h}\] \[f'(x)=\lim\limits_{h \to 0} \left({1 \over
+      {{(x+h)}^n}}- {1 \over x^n}\right) \cdot {1 \over h}\] \[f'(x)=\lim\limits_{h \to 0} \left({x^n \over {x^n
+      {(x+h)}^n}} - {{{(x +h)}^n} \over {x^n {(x +h)}^n}}\right) \cdot {1 \over h}\]
+      \[f'(x) = \lim\limits_{h \to 0} \left( {{{x^n -(x +h)}^n} \over {x^n {(x +h)}^n}}\right) \cdot {1 \over h}\]
+      \[f'(x) = \lim\limits_{h \to 0} {{x^n} -\left( {x^n + n \cdot x^{n-1} \cdot h + n\cdot x^{n-2}\cdot h^2 + \dots + n\cdot x \cdot h^{n-1}+ h^n} \right) 
+        \over{x^n  \cdot \left( {x^n + n \cdot x^{n-1} \cdot h + n \cdot x^{-2} \cdot h^2 + \dots + n \cdot x \cdot h^{n-1} + h^n} \right)}}\cdot {1 \over h}\]
+    
+      \[f'(x) = \lim\limits_{h \to 0} { -\left( { n \cdot x^{n-1} \cdot h + n\cdot x^{n-2}\cdot h^2 + \dots + n\cdot x \cdot h^{n-1}+ h^n} \right) 
+      \over {x^n \cdot x^n }}\cdot {1 \over h}\]
+      \[f'(x) = {{-n \cdot x^{n-1}} \over  x^{2n}}\]
+      \[f'(x) = {-n \over  x^{- \left( n -1\right) } \cdot x^{2n}}\]  
+      \[f'(x) = {-n \over {x^{ \left(n+1 \right)}}}\] \[f'(x)={-m \cdot {x^{ -\left(n+1 \right)}}}\] \[f'(x)={-m \cdot
+      {x^{ -m-1 }}}\]
+    </p>
+    <h3 id="trigFunkt">trigonometrische Funktionen</h3>
+    <h4>\(\sin\)</h4>
+      <p>Für \(f(x) = \sin(x)\) gilt: 
+        \(f'(x) = \cos(x)\)
+      </p>
+      <div id='graphSin'>
+        <!-- Plotly chart will be drawn inside this DIV -->
+      </div>
+      <br><hr>
+
+      <h4>\(\cos\)</h4>
+      Für \(f(x) = \cos(x)\) gilt: \(f'(x) = -\sin(x)\)
+      <div id='graphCos'>
+        <!-- Plotly chart will be drawn inside this DIV -->
+      </div>
+      <br><hr>
+
+      <h4>\(-\sin\)</h4>
+      Für \(f(x) = -\sin(x)\) gilt: \(f'(x) = -\cos(x)\)
+      <div id='graphMinussin'>
+        <!-- Plotly chart will be drawn inside this DIV -->
+      </div>
+      <br><hr>
+
+      <h4>\(-\cos\)</h4>
+      Für \(f(x) = -\cos(x)\) gilt: \(f'(x) = \sin(x)\)
+      <div id='graphMinuscos'>
+        <!-- Plotly chart will be drawn inside this DIV -->
+      </div>
+    
+    <script src="funPlotter.js"></script>
+    <script src="sinPlot.js"></script>
+    <!-- <script src="cosPlot.js"></script> -->
+  </body>
+
+</html>

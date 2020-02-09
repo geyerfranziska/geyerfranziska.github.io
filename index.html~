@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/latest.js?config=TeX-AMS-MML_HTMLorMML'></script>
+
+
+    <!-- <script id="MathJax-script" async="" src="tex-mml-chtml.js"></script> -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="utf-8">
+
+  </head>
+
+  <body>
+    <h1> Mathe-Vokabeln </h1>
+    <ul>
+      <li>Algebra</li>
+      <li>binäre Zahlen</li>
+      <li><a href="stichworte/binomForm.html">binomische Formeln</a></li>
+
+      <li>Geometrie</li>
+      <ul>
+	<li>Dreieck</li>
+	<li>Kugel</li>
+	<li>Satz des Pytagoras</li>
+      </ul>
+      <li>Gleichung</li>
+
+      <li> <a href="stichworte/Grenzwert.html">Grenzwert</a></li>
+      <li><a href="stichworte/Pascal3eck.html">Pascalsches Dreieck</a></li>
+      <li><a href="stichworte/Polynome.html">Polynome</a></li>
+      <ul>
+	<li>Symmetrie</li>
+      </ul>
+      <li>Quadratische Gleichung</li>
+      <u1>
+	<li><a href="stichworte/pqFormel.html">p-q-Formel</a></li>
+      </u1>
+      <li>Rekursion</li>
+      <ul>
+	<li>Kochs Schneeflocke</li>
+	<li>Drachenkurve</li>
+      </ul>
+      <li>Schnittpunkt</li>
+      <li>Summenzeichen ∑</li>
+      <li><a href="stichworte/Term.html">Term</a></li>
+      <li>Türme von Hanoi</li>
+      <li>Vektor</li>
+      <li> <a href="stichworte/Zahlenmengen.html">Zahlenmengen</a></li>
+      <ul>
+	<li>Natürliche Zahlen \(\mathbb{N}\)</li>
+	<li>Ganze Zahlen \(\mathbb{Z}\)</li>
+	<li>Rationale Zahlen \(\mathbb{Q}\)</li>
+	<li>Irrationale Zahlen \(\mathbb{R}\setminus\mathbb{Q}\)</li>
+	<li>Reelle Zahlen \(\mathbb{R}\)</li>
+	<li>Komplexe Zahlen \(\mathbb{C}\)</li>
+      </ul>
+    </ul>
+  </body>
+</html>

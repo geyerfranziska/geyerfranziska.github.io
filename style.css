@@ -1,0 +1,32 @@
+@font-face {
+  font-family: 'CMU Serif Roman';
+    src: url('webfonts/cmuserif_oblique_macroman/cmunti-webfont.woff') format('woff');
+    font-style: italic, oblique;
+}
+@font-face {
+  font-family: 'CMU Serif Roman';
+    src: url('webfonts/cmuserif_boldoblique_macroman/cmunbi-webfont.woff') format('woff');
+    font-weight: bold;
+    font-style: italic, oblique;
+}
+@font-face {
+  font-family: 'CMU Serif Roman';
+    src: url('webfonts/cmuserif_roman_macroman/cmunrm-webfont.woff') format('woff');
+}
+@font-face {
+  font-family: 'CMU Serif Roman';
+    src: url('webfonts/cmuserif_bold_macroman/cmunbx-webfont.woff') format('woff');
+    font-weight: bold;
+}
+
+
+html,body {
+  /* margin: 0; */
+  /* padding: 0; */
+  font-family: 'CMU Serif Roman';
+  /* font-family: "Computer Modern"; */
+}
+
+canvas {
+  display: block;
+}

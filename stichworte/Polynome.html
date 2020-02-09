@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/latest.js?config=TeX-AMS-MML_HTMLorMML'></script>
+    <script src='https://cdn.plot.ly/plotly-latest.min.js'></script>
+    <link rel="stylesheet" type="text/css" href="../style.css">
+  </head>
+  
+  <body>
+    <h2>Symmetrie </h2>
+    <p>
+      Eine Funktion \(f\) heißt achsensymmetrisch zur y-Achse, wenn für alle \(x\in Df\) gilt:
+      \(f(-x) = f(x)\) 
+    </p>
+    <p>Polynome die ausschließlich gerade Exponenten besitzen sind somit symmetrisch zur y-Achse.</p>
+    <p>Beispiel:</p> 
+    <div id='geradePolys'>
+      <!-- Plotly chart will be drawn inside this DIV -->
+    </div>
+
+    <p>Eine Funktion \(f\) heißt punktsymmetrisch zum Ursprung, wenn für alle \(x\in Df\) gilt:
+      \(f(-x) = -f(x)\)
+    </p>
+    <p>Polynome die ausschließlich  ungerade Exponenten besitzen sind somit symmetrisch zur y-Achse.</p>
+    <p>Beispiel:</p> 
+    <div id='ungeradePolys'>
+      <!-- Plotly chart will be drawn inside this DIV -->
+    </div>
+    <script>
+      let xA = [];
+      let gyA1 = [];
+      let ungyA1 = [];
+      let gyA2 = [];
+      let gyA3 = [];
+      for (let x=-10; x<=10; x+=0.1) {
+			     xA.push(x);
+			     
+			     gyA1.push(x * x);
+			     ungyA1.push(x * x * x);
+			     gyA2.push(x * x * x * x - x * x);
+			     gyA3.push(x * x * x * x - 2 * x * x + 4);
+			     }
+			     let gtrace1 = {
+			     x: xA,
+			     y: gyA1,
+			     name: '$f(x) =x^{2}$',
+			     //name: 'x²',
+			     mode: 'lines'
+			     }
+			     let gtrace2 = {
+			     x: xA,
+			     y: gyA2,
+			     //name: '\\(f(x) =x_{2}\\)',
+			     mode: 'lines'
+			     }
+			     let gtrace3 = {
+			     x: xA,
+			     y: gyA3,
+			     mode: 'lines'
+			     }
+			     let layout = {
+			     showlegend: true,
+			     width: 500,
+			     height: 500
+			     };
+			     Plotly.newPlot('geradePolys', [gtrace1],layout);
+			     let ungtrace1 = {
+			     x: xA,
+			     y: ungyA1,
+			     name: '$f(x) =x^{3}$',
+			     //name: 'x³',
+			     mode: 'lines'
+			     }
+			     Plotly.newPlot('ungeradePolys', [ungtrace1],layout);
+			     MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+
+			     </script>
+  </body>
+
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html><html><head>
+    <meta charset="utf-8">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.dom.min.js"></script>
+  </head>
+
+<body>
+    <h2>Pascalsches Dreieck</h2>
+ <p>
+   Erklärung noch im Aufbau
+
+ </p>
+ <div id='p5Container'></div>
+ <script src="pascal3eck.js"></script>
+</body>
+
+</html>

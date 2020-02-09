@@ -1,0 +1,29 @@
+<!DOCTYPE html><html><head>
+    <meta charset="utf-8">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+</head>
+
+<body>
+    <h2>Grenzwert </h2>
+    <p>Wird \(x\) beliebig groß und kommen dabei die Funktionswerte \(f(x)\) der Funktion \(f\) einer Zahl \(a\) 
+      beliebig nahe, so nennt man diese Zahl den Grenzwert der Funktion \(f\) für \(x \to \infty\).
+ </p>
+ <p> Man schreibt:</p>
+
+<p>Für \(x \to \infty\) gilt: \(f(x) \to a\); kurz \(\lim\limits_{x \to \infty} f(x) = a\)</p>
+
+<p>Die Gerade mit der Gleichung \(y = a\) heißt waagerechte Asymptote des Graphen von \(f\) für \(x \to \infty\).</p>
+
+<p>Entsprechend ist der Grenzwert einer Funktion für \(x \to -\infty\) definiert.</p>
+<p>Hat die Funktion \(f\) die Eigenschaft, dass die Funktionswerte für \(x \to x_0\) 
+  und  \(x_0 \to \infty\) sowie für \(x \to x_0\) mit \(x < x_0 \to -\infty\) streben,
+so nennt man die Gerade mit der Gleichung \(x= x_0\) <u>senkrechte Asymptote</u> des Graphen von \(f\). </p>
+
+<p>Wikipedia-Eintrag: <a href="https://de.wikipedia.org/wiki/Grenzwert_(Funktion)">Grenzwert</a></p>
+
+
+</body>
+</html>
