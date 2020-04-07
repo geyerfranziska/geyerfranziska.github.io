@@ -1,123 +1,129 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <script src='p5.min.js'></script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/latest.js?config=TeX-AMS-MML_HTMLorMML'></script>
 
-    <!-- <script id="MathJax-script" async="" src="tex-mml-chtml.js"></script> -->
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <meta charset="utf-8">
-  </head>
+<head>
+  <script src='p5.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/latest.js?config=TeX-AMS-MML_HTMLorMML'></script>
 
-  <body>
-    <h1> Mathe-Vokabeln </h1>
+  <!-- <script id="MathJax-script" async="" src="tex-mml-chtml.js"></script> -->
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <meta charset="utf-8">
+</head>
+
+<body>
+  <h1> Mathe-Vokabeln </h1>
+  <ul>
+    <li><a href="stichworte/ableitung.html">Ableitung</a></li>
     <ul>
-      <li><a href="stichworte/ableitung.html">Ableitung</a></li>
+      <li><a href="stichworte/Ableitungsregeln.html">Ableitungsregeln</a></li>
       <ul>
-        <li><a href="stichworte/Ableitungsregeln.html">Ableitungsregeln</a></li>
-        <ul>
-          <li><a href="stichworte/Ableitungsregeln.html#Potenzregel">Potenzregel</a></li>
-          <li><a href="stichworte/Ableitungsregeln.html#trigFunkt">trigonometrische Funktionen</a></li>
+        <li><a href="stichworte/Ableitungsregeln.html#Potenzregel">Potenzregel</a></li>
+        <li><a href="stichworte/Ableitungsregeln.html#trigFunkt">trigonometrische Funktionen</a></li>
         <li>Summenregel</li>
-        </ul>
-          <li>Differentialquotient</li>
+      </ul>
+      <li>Differentialquotient</li>
       <li>Differenzenquotient</li>
-      
-      </ul>     
-      <li>Algebra</li>
-      <li>binäre Zahlen</li>
-      <li><a href="stichworte/binomForm.html">binomische Formeln</a></li>
 
-      <li><a href="stichworte/Geometrie.html">Geometrie</a></li>
-      <ul>
+    </ul>
+    <li>Algebra</li>
+    <li>binäre Zahlen</li>
+    <li><a href="stichworte/binomForm.html">binomische Formeln</a></li>
+
+    <li><a href="stichworte/Geometrie.html">Geometrie</a></li>
+    <ul>
       <li>Dreieck</li>
       <li>Kreis</li>
       <li>Kugel</li>
       <li>Zylinder</li>
       <li><a href="stichworte/pythagoras.html">Satz des Pythagoras</a></li>
       <li><a href="stichworte/Thales.html">Satz des Thales</a></li>
-      </ul>
-      <li>Gleichung</li>
-
-      <li> <a href="stichworte/Grenzwert.html">Grenzwert</a></li>
-      <li><a href="stichworte/Pascal3eck.html">Pascalsches Dreieck</a></li>
-      <li><a href="stichworte/Polynome.html">Polynome</a></li>
-      <ul>
-	<li>Symmetrie</li>
-      </ul>
-      <li>Quadratische Gleichung</li>
-      <ul><li><a href="stichworte/pqFormel.html">p-q-Formel</a></li>
-      </ul>
-      <li>Rekursion</li>
-      <ul>
-            <li><a href="stichworte/rBaum.html">Baum</a></li>
-            <li><a href="stichworte/kKraut.html">Krauts Kraut</a></li>
-            <li><a href="stichworte/kSchneeflocke.html">Kochs Schneeflocke</a></li>
-            <li>Türme von Hanoi</li>
-      </ul>
-      <li>Schnittpunkt</li>
-      <li><a href="stichworte/Summenzeichen.html">Summenzeichen ∑</a></li>
-      <li><a href="stichworte/Term.html">Term</a></li>
-      <li>Vektor</li>
-      <li> <a href="stichworte/Zahlenmengen.html">Zahlenmengen</a></li>
-      <ul>
-	<li>Natürliche Zahlen \(\mathbb{N}\)</li>
-	<li>Ganze Zahlen \(\mathbb{Z}\)</li>
-	<li>Rationale Zahlen \(\mathbb{Q}\)</li>
-	<li>Irrationale Zahlen \(\mathbb{R}\setminus\mathbb{Q}\)</li>
-	<li>Reelle Zahlen \(\mathbb{R}\)</li>
-	<li>Komplexe Zahlen \(\mathbb{C}\)</li>
-      </ul>
     </ul>
-    <script>//zeichnet ein zufälliges Labyrinth
+    <li>Gleichung</li>
 
-      let laenge = 20;
-      let x = 0;
-      let y = 0;
-      
-      function setup() {
-        let canvas = createCanvas(windowWidth, 1000); // windowHeight);
-        canvas.position(0,0);
-        background(245,255,255);  // background nur einmal
-        canvas.style('z-index', '-1');
+    <li> <a href="stichworte/Grenzwert.html">Grenzwert</a></li>
+    <li><a href="stichworte/Pascal3eck.html">Pascalsches Dreieck</a></li>
+    <li><a href="stichworte/Polynome.html">Polynome</a></li>
+    <ul>
+      <li>Symmetrie</li>
+    </ul>
+    <li>Quadratische Gleichung</li>
+    <ul>
+      <li><a href="stichworte/pqFormel.html">p-q-Formel</a></li>
+    </ul>
+    <li>Rekursion</li>
+    <ul>
+      <li><a href="stichworte/rBaum.html">Baum</a></li>
+      <li><a href="stichworte/kKraut.html">Krauts Kraut</a></li>
+      <li><a href="stichworte/kSchneeflocke.html">Kochs Schneeflocke</a></li>
+      <li>Türme von Hanoi</li>
+    </ul>
+    <li>Schnittpunkt</li>
+    <li><a href="stichworte/Summenzeichen.html">Summenzeichen ∑</a></li>
+    <li><a href="stichworte/Term.html">Term</a></li>
+    <li>Vektor</li>
+    <li> <a href="stichworte/Zahlenmengen.html">Zahlenmengen</a></li>
+    <ul>
+      <li>Natürliche Zahlen \(\mathbb{N}\)</li>
+      <li>Ganze Zahlen \(\mathbb{Z}\)</li>
+      <li>Rationale Zahlen \(\mathbb{Q}\)</li>
+      <li>Irrationale Zahlen \(\mathbb{R}\setminus\mathbb{Q}\)</li>
+      <li>Reelle Zahlen \(\mathbb{R}\)</li>
+      <li>Komplexe Zahlen \(\mathbb{C}\)</li>
+    </ul>
+    <li>Sonstiges
+      <ul><li><a href="stichworte/coronaSim.html">Corona-Simulation</a></li></ul>
+    </li>
+  </ul>
+  <script>//zeichnet ein zufälliges Labyrinth
+
+    let laenge = 20;
+    let x = 0;
+    let y = 0;
+
+    function setup() {
+      let canvas = createCanvas(windowWidth, 1000); // windowHeight);
+      canvas.position(0, 0);
+      background(245, 255, 255);  // background nur einmal
+      canvas.style('z-index', '-1');
+    }
+
+    function draw() {
+      stroke(0, 255, 0);  // Linienfarbe einstellen
+
+      if (random(0, 100) > 50) {  // 50:50 Chance 
+        // Linie von links oben nach rechts unten: \
+        line(x, y, x + laenge, y + laenge);
+      } else {
+        // Linie von rechts oben nach links unten: /
+        line(laenge + x, y, x, y + laenge);
       }
-      
-      function draw() {
-        stroke(0, 255, 0);  // Linienfarbe einstellen
-        
-        if (random(0, 100) > 50) {  // 50:50 Chance 
-          // Linie von links oben nach rechts unten: \
-          line(x, y, x + laenge, y + laenge);
-        } else {
-          // Linie von rechts oben nach links unten: /
-          line(laenge + x, y, x, y + laenge);
-        }
-      
-        x = x + laenge;   // einen Schritt nach rechts
-      
-        if (x >= width) { // rechten Rand angekommen
-          y = y + laenge; // eine Reihe nach unten rücken
-          x = 0;          // wieder an den Anfang der Zeile
-        }
-        if (y > height) {
-          clear();
-          x = 0;
-          y = 0;
-        }
+
+      x = x + laenge;   // einen Schritt nach rechts
+
+      if (x >= width) { // rechten Rand angekommen
+        y = y + laenge; // eine Reihe nach unten rücken
+        x = 0;          // wieder an den Anfang der Zeile
       }
-      
-      function mousePressed() {
+      if (y > height) {
         clear();
         x = 0;
         y = 0;
       }
-      
-      function windowResized() {
-        resizeCanvas(windowWidth, 1000); //windowHeight);
-        clear();
-        x = 0;
-        y = 0;
-      }
-      </script>
-  </body>
+    }
+
+    function mousePressed() {
+      clear();
+      x = 0;
+      y = 0;
+    }
+
+    function windowResized() {
+      resizeCanvas(windowWidth, 1000); //windowHeight);
+      clear();
+      x = 0;
+      y = 0;
+    }
+  </script>
+</body>
+
 </html>
