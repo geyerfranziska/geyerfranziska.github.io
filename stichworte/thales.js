@@ -1,61 +1,133 @@
-let r = 180;
+let r;
 let cx;
 let cy;
 let ww = r / 10;
 let rsq;
 let mx;
 
+let dreieO, dreieL, dreieR;
+
 function setup() {
-  let myCanvas = createCanvas(400, 210);
-  myCanvas.parent('p5Container');
-  cnvPos = myCanvas.position();
+  let myCanvas = createCanvas(400, 430);
+  myCanvas.parent("p5Container");
   cx = width / 2;
-  cy = r + 15;
-  mx = r/3 + (cx - r);
-  rsq =r - sqrt(2*ww*ww);
+  r = width/2 - 20;
+  cy = r + 18;
+  mx = r / 3 + (cx - r);
+  rsq = r - sqrt(2 * ww * ww);
+
+  dreieO = new Dreieck({
+      x: cx - r,
+      y: cy
+    }, {
+      x: cx + r,
+      y: cy
+    }, {
+      x: cx,
+      y: cy
+    },
+    30, 2,
+    [0, 191, 255, 40],
+    [0, 191, 255]);
+
+  dreieL = new Dreieck({
+      x: cx - r,
+      y: cy
+    }, {
+      x: cx,
+      y: cy
+    }, {
+      x: cx - r / 2,
+      y: cy - r / 2
+    },
+    40, 2,
+    [0, 191, 255, 40],
+    [0, 191, 255]);
+  dreieL.ecken.C.angLbl = 'α';
+  dreieL.ecken.B.angLbl = 'γ';
+  dreieR = new Dreieck({
+      x: cx + r,
+      y: cy
+    }, {
+      x: cx + r / 2,
+      y: cy - r / 2
+    }, {
+      x: cx,
+      y: cy
+    },
+    40, 2,
+    [0, 191, 255, 40],
+    [0, 191, 255]);
+  dreieR.ecken.A.angLbl = 'β';
+  dreieR.ecken.C.angLbl = 'δ';
+  print(dreieL);
 }
 
 function draw() {
   background(255);
-  if (mouseIsPressed && mouseX >= cx -r &&
-     mouseX <= cx +r)
+  if (mouseIsPressed && mouseX >= cx - r &&
+    mouseX <= cx + r)
     mx = mouseX;
   noFill();
+  strokeWeight(2);
   stroke(0);
-  arc(cx, cy, 2*r, 2*r, Math.PI, 2*Math.PI);
-//  circle(cx, cy, r * 2);
+  arc(cx, cy, 2 * r, 2 * r, Math.PI, 2 * Math.PI);
+  //  circle(cx, cy, r * 2);
+
   line(cx - r, cy, cx + r, cy);
   const p1 = {
     x: cx - r,
-    y: cy};
-  const p2 = {x: cx + r, y:cy};
+    y: cy
+  };
+  const p2 = {
+    x: cx + r,
+    y: cy
+  };
   const dx = cx - mx;
   const dy = sqrt(r * r - dx * dx);
-  const p3 = {x: mx, y:cy - dy}; 
-  fill(0, 191, 255, 40);
-  stroke(0, 191, 255);
-  triangle(p1.x, p1.y,p2.x, p2.y,p3.x, p3.y);
-  circle(p1.x, p1.y, 10);
-  circle(p2.x, p2.y, 10);
-  circle(p3.x, p3.y, 10);
-  
-  const a1 = atan(dy / (p3.x - (cx - r))) - Math.PI/2;
-  translate(p3.x, p3.y);
-  rotate(-a1);
-  square(0, 0, ww);
+  const p3 = {
+    x: mx,
+    y: cy - dy
+  };
+
+  dreieO.move_ecke('C', p3.x, p3.y);
+  dreieO.draw();
+  strokeWeight(3);
+  dreieO.draw_sqAngle('C');
   strokeWeight(2);
-  point(ww/2,ww/2);
-//  let m1 = -dy / (mouseX - (cx - r));
-//  let m2 = -1 / m1;
-//  let a1 = atan(m1);
-//  let x0 = cos(a1) * -ww;
-//  let y0 = sin(a1) * -ww;
-//  const sqp1 = {x:p3.x + x0,y:p3.y + y0};
-//  circle(sqp1.x, sqp1.y, 5);
-  
-//  const ac = asin(dy/r);
-//  const sqp2 = {x: cos(ac) * rsq, y: sin(ac) * rsq};
-//  circle(sqp2.x, sqp2.y, 5);
-  
- // print(m1, m2,rsq);
+  // dreieO.draw_arcs();
+  //dreieO.draw_winkel_label();
+  stroke(0);
+  strokeWeight(1);
+  dreieO.draw_ecken_label();
+  dreieO.draw_seiten();
+
+  translate(0, r + 20);
+
+  noFill();
+  stroke(0);
+  arc(cx, cy, 2 * r, 2 * r, Math.PI, 2 * Math.PI);
+  //  circle(cx, cy, r * 2);
+
+  line(cx - r, cy, cx + r, cy);
+
+  stroke(0);
+  strokeWeight(1);
+  dreieO.draw_ecken_label();
+
+  dreieL.move_ecke('C', p3.x, p3.y);
+  dreieR.move_ecke('B', p3.x, p3.y);
+
+  textSize(16);
+  dreieL.draw();
+  dreieL.draw_arcs();
+  dreieL.draw_winkel_label();
+  //  dreieL.draw_ecken_label();
+  dreieL.draw_seiten();
+
+  dreieR.draw();
+  dreieR.draw_arcs();
+  dreieR.draw_winkel_label();
+  //  dreieR.draw_ecken_label();
+  dreieR.draw_seiten();
 }
