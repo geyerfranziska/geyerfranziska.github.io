@@ -1,6 +1,11 @@
 <!DOCTYPE html><html><head>
+    <script src='../p5.min.js'></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/latest.js?config=TeX-AMS-MML_HTMLorMML'></script>
     </script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({ TeX: { extensions: ["color.js"] }});
+      </script>
+      
     <link rel="stylesheet" type="text/css" href="../style.css">
     <meta charset="utf-8">
 </head>
@@ -9,11 +14,15 @@
     <h2>Binomische Formeln </h2>
     <p>1. binomische Formel: \( (a + b)^2 = a^2 + 2ab + b^2 \)
  </p>
- <p>2. binomische Formel: \( (a - b)^2 = a^2 - 2ab + b^2 \)</p>
 
+<div id="p5Container1"></div>
+<div id="binomWerte"></div>
+
+<p>2. binomische Formel: \( (a - b)^2 = a^2 - 2ab + b^2 \)</p>
 <p>3. binomische Formel:\( (a + b)*(a - b) = a^2 - b^2 \)</p>
 
-  
+<script src="binom1.js"></script>
+
 </body>
 </html>
 
