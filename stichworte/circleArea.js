@@ -25,11 +25,11 @@ let arcSlider;
 
 function setup() {
   mc = createCanvas(600, 220);
-  mc.parent('p5Container');
+  mc.parent('p5Container1');
   mcPos = mc.position();
 
   arcSlider = createSlider(-10, 110, -10, 1);
-  arcSlider.parent('p5Container');
+  arcSlider.parent('p5Container1');
   arcSlider.position(mcPos.x, mcPos.y + height - 25);
   strokeCap(SQUARE);
 }

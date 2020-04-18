@@ -1,0 +1,34 @@
+<!DOCTYPE html><html><head>
+  <script src='../p5.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/latest.js?config=TeX-AMS-MML_HTMLorMML'></script>
+  </script>
+  <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({ TeX: { extensions: ["color.js"] }});
+    </script>
+    
+  <link rel="stylesheet" type="text/css" href="../style.css">
+  <meta charset="utf-8">
+</head>
+
+<body>
+  <h2>Kreis </h2>
+  <p>Durchmesser eines Kreises berechnen:
+     \[\large d = 2 \cdot r\]
+    <br> Umfang eines Kreises berechnen:
+     \[\large U = \pi \cdot d\]
+   <br>  Flächeninhalt eines Kreises berechnen:
+    \[\large A_k = \pi \cdot r^2\] </p>
+    <figure>
+   <div id='p5Container1'></div>
+   <figcaption>Den Flächeninhalt des Kreises über ein Dreieck annähern</figcaption>
+  </figure>
+  <figure>
+    <div id='p5Container2'></div>
+   <figcaption>Den Flächeninhalt des Kreises über ein Rechteck annähern.
+      Mit höherer Anzahl der Sektoren wird die Annährung genauer.</figcaption>
+ </figure>
+   
+ <script src="circleArea.js"></script>
+ <script src="circleAreaPie.js"></script>
+</body>
+</html>
