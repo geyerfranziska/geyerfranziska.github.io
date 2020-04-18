@@ -64,14 +64,13 @@ p.draw = function () {
   for (let i = 0; i < anzahlSlice / 2; i++) {
     let x = 10 + 2 * r + 100 + i * sliceWidth;
     let y = p.height / 3 * 2;
-    p.fill(...slcClrs2[i]);
+    p.fill(...slcClrs1[i]);
     p.arc(x, y, 2 * r, 2 * r, p.PI + p.HALF_PI - sliceAngle / 2, p.PI + p.HALF_PI + sliceAngle / 2, p.PIE);
   }
-  p.fill(...clrH2);
   for (let i = 0; i < anzahlSlice / 2; i++) {
     let x = 10 + 2 * r + 100 + i * sliceWidth + sliceWidth / 2;
     let y = p.height / 3 * 2 - sliceHeight;
-    p.fill(...slcClrs1[i]);
+    p.fill(...slcClrs2[i]);
     p.arc(x, y, 2 * r, 2 * r, p.HALF_PI - sliceAngle / 2, p.HALF_PI + sliceAngle / 2, p.PIE);
   }
   const x = 10 + 2 * r + 100 - sliceWidth/2;
