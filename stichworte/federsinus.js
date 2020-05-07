@@ -1,3 +1,5 @@
+p5.disableFriendlyErrors = true; // disables FES
+
 let feder;
 let t = 0;
 let sliderAuslenk;

@@ -1,3 +1,5 @@
+p5.disableFriendlyErrors = true; // disables FES
+
 let pendel;
 let pendel2;
 let feder;
