@@ -63,7 +63,7 @@ class Pendel {
 
   draw(clr = [255,255,255]) {
     stroke(...clr);
-    strokeWeight(1);
+    strokeWeight(1.8);
     fill(...clr);
     line(this.x, this.y, this.px, this.py);
     circle(this.px, this.py, 20);
