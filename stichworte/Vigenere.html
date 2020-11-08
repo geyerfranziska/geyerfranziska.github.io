@@ -1,0 +1,22 @@
+<!DOCTYPE html><html lang="en">
+  <head>
+    <meta charset="utf-8">
+
+  </head>
+  <body>
+    <h1>Vigenère-Verschlüsselung</h1>
+
+    <!-- rows="4" cols="50"> -->
+  <textarea id="eingabetext" name="eingabetext" cols="80" >
+  </textarea><br><br>
+  <label for="inputKey">Schlüsselwort:</label>
+  <input type="text" id="inputKey" name="inputKey">
+  <button type="button" id="btnDecode" onclick="buttonDecode()"> Entschlüsseln!</button>
+ <button type="button" id="btnEncode" onclick="buttonEncode()"> Verschlüsseln!</button>
+  <br><br>
+  <textarea id="ausgabetext" name="ausgabetext" cols="80" >
+  </textarea>
+
+    <script src="vigenere.js"></script>
+</body>
+</html>
